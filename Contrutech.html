@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construtech Verde | Trazabilidad DLT</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        .geo-input-group {
+            display: flex;
+            gap: 1rem;
+        }
+        .form-input-field {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+        }
+        .form-input-field:focus {
+            border-color: #059669; 
+            outline: none;
+        }
+        
+        .responsive-img-container {
+            width: 100%;
+            max-height: 450px; 
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        .responsive-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    
+    <header class="bg-white shadow-lg sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 text-2xl font-extrabold text-gray-800">
+                    <span class="text-green-600">CONSTRUTECH</span> VERDE
+                </div>
+                <nav class="flex space-x-4">
+                    <a href="#" onclick="showSection('home')" id="nav-home" class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out bg-green-50">
+                        Sobre Nosotros
+                    </a>
+                    <a href="#" onclick="showSection('registro')" id="nav-registro" class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition duration-150 ease-in-out">
+                        Registro RCD
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL DE LA APLICACIÓN -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!--  INICIO / QUIÉNES SOMOS -->
+        <section id="home-section" class="bg-white p-6 sm:p-10 rounded-xl shadow-2xl transition-opacity duration-300">
+            
+            
+            <div class="responsive-img-container">
+                <img 
+                    src="C:\Users\roval\OneDrive\Imágenes\Construtech.png"
+                    alt="Camión de Construtech Verde cargando escombros de una demolición, supervisado por ingenieros, para su trazabilidad."
+                    class="w-full h-auto object-cover"
+                >
+            </div>
+            
+
+            <h1 class="text-4xl font-extrabold text-gray-800 mb-4 border-b-2 pb-2 border-green-200">
+                Construtech Verde: Pioneros en Trazabilidad de RCD con DLT
+            </h1>
+            <p class="text-lg text-gray-600 mb-8">
+                Somos Construtech Verde, la plataforma SaaS diseñada para revolucionar la gestión de Residuos de Construcción y Demolición (RCD). Nuestra misión es garantizar la transparencia y el cumplimiento ambiental usando la tecnología de Ledger Distribuido (DLT), proveyendo una solución inmutable y geoespacial para la economía circular.
+            </p>
+
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-10">
+                <div class="p-6 bg-green-50 rounded-lg shadow-sm">
+                    <h3 class="font-bold text-xl text-green-700 mb-2">1. Trazabilidad DLT</h3>
+                    <p class="text-gray-600">
+                        Cada etapa del residuo (Generación, Transporte, Acopio, Valorización) se registra como una transacción inmutable en el Ledger, garantizando transparencia y previniendo la manipulación de datos.
+                    </p>
+                </div>
+                <div class="p-6 bg-blue-50 rounded-lg shadow-sm">
+                    <h3 class="font-bold text-xl text-blue-700 mb-2">2. Gestión Geoespacial</h3>
+                    <p class="text-gray-600">
+                        Integramos la geolocalización (GPS) para certificar el punto de recogida y optimizar el uso del espacio físico en los centros de acopio, visualizando la capacidad en tiempo real.
+                    </p>
+                </div>
+                <div class="p-6 bg-yellow-50 rounded-lg shadow-sm">
+                    <h3 class="font-bold text-xl text-yellow-700 mb-2">3. Cumplimiento Normativo</h3>
+                    <p class="text-gray-600">
+                        Nuestros Smart Contracts validan automáticamente que cada movimiento de RCD cumpla con la normativa ambiental vigente antes de ser registrado permanentemente.
+                    </p>
+                </div>
+            </div>
+
+            <p class="text-md text-gray-700">
+                Para iniciar la trazabilidad de un nuevo lote de RCD en tu obra, por favor, navega a la sección Registro RCD.
+            </p>
+            
+           
+            <hr class="mt-8 border-gray-300">
+            <p class="text-center text-sm text-gray-500 mt-4">Certificado</p>
+
+        </section>
+
+        <!-- REGISTRO DE GENERACIÓN DE RCD -->
+        <section id="registro-section" class="bg-white p-6 sm:p-10 rounded-xl shadow-2xl hidden transition-opacity duration-300">
+            <h1 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 pb-2 border-green-200">Registro de Generación de RCD</h1>
+            <p class="text-gray-600 mb-6">
+                Complete los campos para iniciar un nuevo lote de Residuos de Construcción y Demolición. Este registro incluirá su ubicación GPS actual en la cadena de bloques.
+            </p>
+
+            <form id="registroForm" class="space-y-6">
+                <!-- TIPO DE RESIDUO -->
+                <div>
+                    <label for="tipoResiduo" class="block text-sm font-medium text-gray-700 mb-1">Tipo de Residuo:</label>
+                    <select id="tipoResiduo" class="form-input-field" required>
+                        <option value="">-- Seleccione el tipo --</option>
+                        <option value="Hormigon">Hormigón/Ladrillo (Inerte)</option>
+                        <option value="Madera">Madera (Valorizable)</option>
+                        <option value="Plastico">Plástico/Metal (Mezcla)</option>
+                        <option value="Tierra">Tierra/Roca (Inerte)</option>
+                    </select>
+                </div>
+
+                <!-- CANTIDAD -->
+                <div>
+                    <label for="cantidadKg" class="block text-sm font-medium text-gray-700 mb-1">Cantidad Aproximada (Kg):</label>
+                    <input 
+                        type="number" 
+                        id="cantidadKg" 
+                        class="form-input-field"
+                        placeholder="Ejemplo: 5000"
+                        min="1"
+                        required
+                    >
+                </div>
+                
+                <!-- GEOLOCALIZACIÓN -->
+                <div>
+                    <label for="ubicacionGeneracion" class="block text-sm font-medium text-gray-700 mb-1">Ubicación de Generación (GPS):</label>
+                    <div class="geo-input-group">
+                        <input 
+                            type="text" 
+                            id="ubicacionGeneracion" 
+                            class="form-input-field bg-gray-100"
+                            placeholder="Latitud, Longitud"
+                            readonly 
+                            required
+                        >
+                        <button type="button" id="btnCapturarGeo" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-200 whitespace-nowrap">
+                            Capturar GPS 📍
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- HASH DEL DOCUMENTO -->
+                <div>
+                    <label for="hashCertificado" class="block text-sm font-medium text-gray-700 mb-1">Hash de Certificado (Adjunto off-chain):</label>
+                    <input 
+                        type="text" 
+                        id="hashCertificado" 
+                        class="form-input-field"
+                        placeholder="SHA-256 del albarán de obra (p. ej., A2C4...)"
+                        maxlength="64"
+                        required
+                    >
+                </div>
+
+                <!-- BOTÓN DE ENVÍO -->
+                <button type="submit" id="btnEnviar" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-xl w-full shadow-lg transition duration-200 disabled:opacity-50">
+                    Registrar Lote en DLT
+                </button>
+            </form>
+
+            <!-- CONTENEDOR DE MENSAJES -->
+            <div id="messageContainer" class="p-4 mt-6 rounded-lg text-sm font-medium hidden" role="alert"></div>
+        </section>
+
+    </main>
+
+    <script>
+        // Lógica JavaScript para navegación y funcionalidad de la aplicación.
+
+        const homeSection = document.getElementById('home-section');
+        const registroSection = document.getElementById('registro-section');
+        const navHome = document.getElementById('nav-home');
+        const navRegistro = document.getElementById('nav-registro');
+
+        const btnCapturarGeo = document.getElementById('btnCapturarGeo');
+        const ubicacionGeneracion = document.getElementById('ubicacionGeneracion');
+        const registroForm = document.getElementById('registroForm');
+        const messageContainer = document.getElementById('messageContainer');
+        const btnEnviar = document.getElementById('btnEnviar');
+
+        // Función para cambiar la sección activa
+        function showSection(sectionId) {
+            // Ocultar todas las secciones y resetear estilos de navegación
+            homeSection.classList.add('hidden');
+            registroSection.classList.add('hidden');
+            navHome.classList.remove('bg-green-50');
+            navRegistro.classList.remove('bg-green-50');
+
+            // Mostrar la sección solicitada y actualizar el estilo de navegación
+            if (sectionId === 'home') {
+                homeSection.classList.remove('hidden');
+                navHome.classList.add('bg-green-50');
+            } else if (sectionId === 'registro') {
+                registroSection.classList.remove('hidden');
+                navRegistro.classList.add('bg-green-50');
+            }
+        }
+        
+        // Mostrar la sección de inicio al cargar la página
+        window.onload = () => showSection('home');
+        
+        // Exponer la función de navegación al scope global para que funcione en el onclick
+        window.showSection = showSection;
+
+        // Función para mostrar mensajes de estado
+        function displayMessage(msg, type) {
+            messageContainer.textContent = msg;
+            messageContainer.classList.remove('hidden');
+            messageContainer.classList.remove('bg-red-100', 'bg-green-100', 'text-red-700', 'text-green-700', 'bg-gray-100', 'text-gray-700');
+            
+            if (type === 'success') {
+                messageContainer.classList.add('bg-green-100', 'text-green-700');
+            } else if (type === 'error') {
+                messageContainer.classList.add('bg-red-100', 'text-red-700');
+            } else { // info
+                messageContainer.classList.add('bg-gray-100', 'text-gray-700');
+            }
+        }
+
+        // 1. Captura de Geolocalización (Función Geoespacial)
+        btnCapturarGeo.addEventListener('click', () => {
+            if (navigator.geolocation) {
+                ubicacionGeneracion.value = 'Capturando...';
+                btnCapturarGeo.disabled = true;
+                btnEnviar.disabled = true;
+
+                displayMessage("Buscando coordenadas GPS...", 'info');
+
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        // Formatear coordenadas con precisión limitada
+                        const coords = `${position.coords.latitude.toFixed(6)}, ${position.coords.longitude.toFixed(6)}`;
+                        ubicacionGeneracion.value = coords;
+                        displayMessage(`Ubicación capturada con éxito: ${coords}`, 'success');
+                        btnCapturarGeo.disabled = false;
+                        btnEnviar.disabled = false;
+                    },
+                    (error) => {
+                        ubicacionGeneracion.value = 'Error al capturar';
+                        displayMessage(`Error GPS: ${error.message}. Debe permitir el acceso a la ubicación.`, 'error');
+                        btnCapturarGeo.disabled = false;
+                    },
+                    { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 }
+                );
+            } else {
+                displayMessage("Geolocalización no es soportada por este dispositivo/navegador.", 'error');
+            }
+        });
+
+        // 2. Envío del Formulario (Simulación de la Integración DLT Real)
+        registroForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Deshabilitar botones para evitar envíos duplicados
+            btnEnviar.disabled = true;
+            btnCapturarGeo.disabled = true;
+            btnEnviar.textContent = 'Procesando Smart Contract...';
+            messageContainer.classList.add('hidden');
+
+            // Recopilar datos del formulario
+            const data = {
+                idRCD: 0, // Nuevo Lote
+                tipo: document.getElementById('tipoResiduo').value,
+                cantidad: parseInt(document.getElementById('cantidadKg').value),
+                etapa: "Generación",
+                geo: ubicacionGeneracion.value,
+                hash: document.getElementById('hashCertificado').value,
+            };
+
+            // --- PASO DE INTEGRACIÓN REAL SIMULADO ---
+            
+            console.log("--- SIMULACIÓN DE INTEGRACIÓN DLT ---");
+            console.log("1. Datos recopilados (Frontend):", data);
+
+            // En un entorno real, aquí se realizaría la llamada asíncrona a la API Backend
+            // (p. ej., POST /api/rcd/registrar)
+
+            try {
+                // 2. SIMULACIÓN DE LLAMADA ASÍNCRONA AL BACKEND
+                // El Backend recibe 'data' y prepara la transacción DLT.
+                displayMessage('Enviando datos al Backend para validación...', 'info');
+                await new Promise(resolve => setTimeout(resolve, 1500)); 
+
+                // 3. SIMULACIÓN DE LA LÓGICA DEL BACKEND Y EL SMART CONTRACT
+                // El Backend usa el SDK de la DLT para:
+                // a) Llamar al Smart Contract (función registrarLog).
+                // b) Esperar la confirmación del consenso de la red.
+                displayMessage('El Smart Contract está validando el registro...', 'info');
+                await new Promise(resolve => setTimeout(resolve, 2000)); 
+
+                // 4. SIMULACIÓN DE RESPUESTA EXITOSA DEL DLT
+                const nuevoId = Math.floor(Math.random() * 99999) + 10000;
+                const txHashSimulado = "0x" + Array(64).fill(0).map(() => (~~(Math.random() * 16)).toString(16)).join('');
+
+                // 5. El Backend devuelve la confirmación
+                console.log(`2. Respuesta exitosa del Smart Contract. Lote ID: ${nuevoId}`);
+                console.log(`3. Transacción DLT Hash: ${txHashSimulado}`);
+
+                displayMessage(`✅ Lote N° ${nuevoId} registrado con éxito en el Ledger Inmutable. Hash TX: ${txHashSimulado.substring(0, 10)}...`, 'success');
+                
+                // Limpiar el formulario y el input de GPS
+                registroForm.reset(); 
+                ubicacionGeneracion.value = '';
+
+            } catch (error) {
+                // Manejo de errores de la API o del Smart Contract
+                displayMessage('❌ Error grave en la validación DLT. Contacte al administrador.', 'error');
+                console.error("Error simulado de DLT:", error);
+            } finally {
+                // Restaurar el estado de los botones
+                btnEnviar.disabled = false;
+                btnCapturarGeo.disabled = false;
+                btnEnviar.textContent = 'Registrar Lote en DLT';
+            }
+        });
+    </script>
+</body>
+</html>
